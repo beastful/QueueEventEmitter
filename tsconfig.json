@@ -2,23 +2,23 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "moduleDetection": "force",
     "noEmit": true,
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* The "typeRoots" configuration specifies the __cpLocations where 
+       TypeScript looks for type definitions (.d.ts files) to 
+       include in the compilation process.*/
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
   },
-  "include": ["src"]
+  /* include /index.ts*/
+  "include": ["src", "./main.ts"],
 }
